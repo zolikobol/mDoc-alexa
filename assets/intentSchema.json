@@ -1,0 +1,35 @@
+{
+  "intents": [
+    {
+      "intent": "PatientDefineIntent",
+      "slots": [
+        {
+          "name": "firstName",
+          "type": "AMAZON.US_FIRST_NAME"
+        },
+        {
+          "name": "lastName",
+          "type": "AMAZON.US_FIRST_NAME"
+        }
+      ]
+    },
+    {
+      "intent": "MedicineIntent",
+      "slots": [
+        {
+          "name": "medicineTime",
+          "type": "AMAZON.TIME"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

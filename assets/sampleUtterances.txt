@@ -1,0 +1,3 @@
+PatientDefineIntent my name is {firstName} {lastName}
+MedicineIntent i had them at {medicineTime}
+MedicineIntent i did not take my medicine
