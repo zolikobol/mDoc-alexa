@@ -17,6 +17,12 @@ var predefinedValues = {
     'painIntensityHeavy' : [
         'heavy'
     ],
+    'painFrequent' : [
+        'frequent'
+    ],
+    'painNotFrequent' : [
+        'frequent'
+    ]
 }
 
 var colectedData = {};
@@ -35,6 +41,8 @@ var languageStrings = {
             'PAIN_DEFINED' : 'Pain in BODY_PART is not good. Is it heavy pain or light pain?',
             'HEAVY_PAIN_MESSAGE' : 'Heavy pain is dangerous. I will allert your doctor.',
             'LIGHT_PAIN_MESSAGE' : 'Do you feel it on regular basis or just now?',
+            'PAIN_FREQUENT_MESSAGE' : 'Frequent pain is not good. I will allert your doctor.',
+            'PAIN_NOT_FREQUENT_MESSAGE' : 'Thank you for the information. I am going to send the information to your doctor. Take care. Good bye.',
             'UNHANDLED' : 'Sorry I didnt quite get that!'
         }
     },
@@ -51,6 +59,8 @@ var languageStrings = {
             'PAIN_DEFINED' : 'Pain in BODY_PART is not good. Is it heavy pain or light pain?',
             'HEAVY_PAIN_MESSAGE' : 'Heavy pain is dangerous. I will allert your doctor.',
             'LIGHT_PAIN_MESSAGE' : 'Do you feel it on regular basis or just now?',
+            'PAIN_FREQUENT_MESSAGE' : 'Frequent pain is not good. I will allert your doctor.',
+            'PAIN_NOT_FREQUENT_MESSAGE' : 'Thank you for the information. I am going to send the information to your doctor. Take care. Good bye.',
             'UNHANDLED' : 'Sorry I didnt quite get that!'
         }
     },
@@ -67,6 +77,8 @@ var languageStrings = {
             'PAIN_DEFINED' : 'Pain in BODY_PART is not good. Is it heavy pain or light pain?',
             'HEAVY_PAIN_MESSAGE' : 'Heavy pain is dangerous. I will allert your doctor.',
             'LIGHT_PAIN_MESSAGE' : 'Do you feel it on regular basis or just now?',
+            'PAIN_FREQUENT_MESSAGE' : 'Frequent pain is not good. I will allert your doctor.',
+            'PAIN_NOT_FREQUENT_MESSAGE' : 'Thank you for the information. I am going to send the information to your doctor. Take care. Good bye.',
             'UNHANDLED' : 'Sorry I didnt quite get that!'
         }
     }
@@ -111,9 +123,9 @@ const handlers = {
         var diff = Math.abs(medicineTime.diff(patientMedicineTime, 'seconds'));
         colectedData['medicineTime'] = medicineTime;
         if (diff <= 3600) {
-            this.emit(':ask', this.t('MEDICINE_TAKEN'));
+            this.emit(':ask', this.t('MEDICINE_TAKEN') , this.t('MEDICINE_TAKEN'));
         } else {
-            this.emit(':ask', this.t('NOT_TAKEN_MEDICINE'));
+            this.emit(':ask', this.t('NOT_TAKEN_MEDICINE') , this.t('NOT_TAKEN_MEDICINE'));
         }
 
     },
@@ -129,7 +141,7 @@ const handlers = {
      *
      */
     'VisitStartIntent': function () {
-        this.emit(':ask', this.t('VISIT_START_MESSAGE'));
+        this.emit(':ask', this.t('VISIT_START_MESSAGE') , this.t('VISIT_START_MESSAGE'));
 
     },
     /*
@@ -139,14 +151,14 @@ const handlers = {
         var bodyPart = this.event.request.intent.slots.bodyPart.value;
         colectedData['pain'] = bodyPart;
         var message = this.t('PAIN_DEFINED').replace('BODY_PART' , bodyPart);
-        this.emit(':ask', message);
+        this.emit(':ask', message , message);
 
     },
     /*
      *
      */
     'PainNotDefinedIntent': function () {
-        this.emit(':ask', this.t('PAIN_NOT_DEFINED'));
+        this.emit(':ask', this.t('PAIN_NOT_DEFINED') , this.t('PAIN_NOT_DEFINED'));
 
     },
     /*
@@ -157,11 +169,11 @@ const handlers = {
         var lightPain = predefinedValues.painIntensityLight;
         var heavyPain = predefinedValues.painIntensityHeavy;
         if(lightPain.indexOf(painIntesity) >= 0){
-            colectedData['painIntensity'] = 1;
-            this.emit(':ask', this.t('LIGHT_PAIN_MESSAGE'));
+            colectedData['painIntensity'] = painIntesity;
+            this.emit(':ask', this.t('LIGHT_PAIN_MESSAGE') , this.t('LIGHT_PAIN_MESSAGE'));
         }
         if(heavyPain.indexOf(painIntesity) >= 0){
-            colectedData['painIntensity'] = 2;
+            colectedData['painIntensity'] = painIntesity;
             this.emit(':tell', this.t('HEAVY_PAIN_MESSAGE'));
         }
         this.emit(':ask', this.t('UNHANDLED'));
@@ -171,8 +183,17 @@ const handlers = {
      */
     'PainFrequencyIntent': function () {
         var painFrequency = this.event.request.intent.slots.painFrequency.value;
-        this.emit(':ask', painFrequency);
-
+        var frequent = predefinedValues.painFrequent;
+        var notFrequent = predefinedValues.painNotFrequent;
+        if(frequent.indexOf(painFrequency) >= 0){
+            colectedData['painFrequency'] = painFrequency;
+            this.emit(':ask', this.t('PAIN_FREQUENT_MESSAGE') , this.t('PAIN_FREQUENT_MESSAGE'));
+        }
+        if(notFrequent.indexOf(painFrequency) >= 0){
+            colectedData['painFrequency'] = painFrequency;
+            this.emit(':tell', this.t('PAIN_NOT_FREQUENT_MESSAGE'));
+        }
+        this.emit(':ask', this.t('UNHANDLED') , this.t('UNHANDLED'));
     },
     /*
      *
