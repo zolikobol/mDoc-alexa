@@ -25,7 +25,15 @@ var predefinedValues = {
     ]
 }
 
-var colectedData = {};
+var collectedData = {
+    'firstName' : null,
+    'lastName' : null,
+    'medicineTime' : null,
+    'visitTime' : null,
+    'pain' : null,
+    'painIntensity' : null,
+    'painFrequency' : null,
+};
 
 var languageStrings = {
     'en-GB': {
@@ -89,39 +97,35 @@ const handlers = {
      *  LaunchRequest is the first fired when we start the skill with "Alxa open the doctor""
      */
     'LaunchRequest': function () {
+        this.attributes['mdoc'] = collectedData;
         this.emit(':ask', this.t('WELCOME_MESSAGE'));
     },
     /*
      *  PatientDefinedIntent is firing when we say our name
      */
     'PatientDefineIntent': function () {
-        if (typeof this.attributes['mdoc'] == 'undefined') {
-            var attributes = this.attributes['mdoc'];
-        } else {
-            var attributes = {};
-        }
+
         var firstName = this.event.request.intent.slots.firstName.value;
         var lastName = this.event.request.intent.slots.lastName.value;
-        attributes = {
-            'firstName': firstName,
-            'lastName': lastName
-        }
-        this.attributes['mdoc'] = attributes;
+        collectedData['firstName'] = firstName;
+        collectedData['lastName'] = lastName;
+        this.attributes['mdoc'] = collectedData;
         this.emit(':ask', "Hello " + firstName + " " + lastName + ". " + this.t('MEDICINE_OFFER'), this.t('MEDICINE_OFFER'));
     },
     /*
      *
      */
     'MedicineIntent': function () {
-        var attributes = this.event.session.attributes;
         var patientMedicineTime = moment(this.event.request.intent.slots.medicineTime.value, 'HH:mm');
         if (typeof patientMedicineTime == 'undefined') {
-            colectedData['medicineTime'] = false;
+            collectedData['medicineTime'] = false;
+            this.attributes['mdoc'] = collectedData;
             this.emit(':ask', this.t('NOT_TAKEN_MEDICINE'));
         }
         var medicineTime = moment(predefinedValues['medicineTime'], 'HH:mm');
         var diff = Math.abs(medicineTime.diff(patientMedicineTime, 'seconds'));
-        colectedData['medicineTime'] = medicineTime;
+        collectedData['medicineTime'] = medicineTime;
+        this.attributes['mdoc'] = collectedData;
         if (diff <= 3600) {
             this.emit(':ask', this.t('MEDICINE_TAKEN') , this.t('MEDICINE_TAKEN'));
         } else {
@@ -134,7 +138,8 @@ const handlers = {
      */
     'VisitDoneIntent': function () {
         var visitTime = this.event.request.intent.slots.visitTime.value;
-        colectedData['visitTime'] = visitTime;
+        collectedData['visitTime'] = visitTime;
+        this.attributes['mdoc'] = collectedData;
         this.emit(':ask', visitTime);
     },
     /*
@@ -149,7 +154,8 @@ const handlers = {
      */
     'PainDefinedIntent': function () {
         var bodyPart = this.event.request.intent.slots.bodyPart.value;
-        colectedData['pain'] = bodyPart;
+        collectedData['pain'] = bodyPart;
+        this.attributes['mdoc'] = collectedData;
         var message = this.t('PAIN_DEFINED').replace('BODY_PART' , bodyPart);
         this.emit(':ask', message , message);
 
@@ -169,11 +175,13 @@ const handlers = {
         var lightPain = predefinedValues.painIntensityLight;
         var heavyPain = predefinedValues.painIntensityHeavy;
         if(lightPain.indexOf(painIntesity) >= 0){
-            colectedData['painIntensity'] = painIntesity;
+            collectedData['painIntensity'] = painIntesity;
+            this.attributes['mdoc'] = collectedData;
             this.emit(':ask', this.t('LIGHT_PAIN_MESSAGE') , this.t('LIGHT_PAIN_MESSAGE'));
         }
         if(heavyPain.indexOf(painIntesity) >= 0){
-            colectedData['painIntensity'] = painIntesity;
+            collectedData['painIntensity'] = painIntesity;
+            this.attributes['mdoc'] = collectedData;
             this.emit(':tell', this.t('HEAVY_PAIN_MESSAGE'));
         }
         this.emit(':ask', this.t('UNHANDLED'));
@@ -186,11 +194,13 @@ const handlers = {
         var frequent = predefinedValues.painFrequent;
         var notFrequent = predefinedValues.painNotFrequent;
         if(frequent.indexOf(painFrequency) >= 0){
-            colectedData['painFrequency'] = painFrequency;
+            collectedData['painFrequency'] = painFrequency;
+            this.attributes['mdoc'] = collectedData;
             this.emit(':ask', this.t('PAIN_FREQUENT_MESSAGE') , this.t('PAIN_FREQUENT_MESSAGE'));
         }
         if(notFrequent.indexOf(painFrequency) >= 0){
-            colectedData['painFrequency'] = painFrequency;
+            collectedData['painFrequency'] = painFrequency;
+            this.attributes['mdoc'] = collectedData;
             this.emit(':tell', this.t('PAIN_NOT_FREQUENT_MESSAGE'));
         }
         this.emit(':ask', this.t('UNHANDLED') , this.t('UNHANDLED'));
