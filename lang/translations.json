@@ -1,0 +1,56 @@
+{
+  "en-GB": {
+    "translation": {
+        "MEDICINE_OFFER": "You need to take your medicine. When did you take your medicine?",
+        "WELCOME_MESSAGE": "Good morning, who is my pacient today?",
+        "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 AM.You have to attend doctors visit. When did you attend the visit?",
+        "MEDICINE_TAKEN": "Good to hear. You have to attend doctors visit. When did you attend the visit?",
+        "HELP_MESSAGE": "Help!",
+        "GOOD_BYE": "Good bye!",
+        "VISIT_START_MESSAGE" : "Okay then. We will make today visit now. Do you feel good or you feel pain?",
+        "PAIN_NOT_DEFINED" : "That is not good. Where do you feel pain? In head, in arms, in legs or in stomach?",
+        "PAIN_DEFINED" : "Pain in BODY_PART is not good. Is it heavy pain or light pain?",
+        "HEAVY_PAIN_MESSAGE" : "Heavy pain is dangerous. I will allert your doctor.",
+        "LIGHT_PAIN_MESSAGE" : "Do you feel it on regular basis or just now?",
+        "PAIN_FREQUENT_MESSAGE" : "Frequent pain is not good. I will allert your doctor.",
+        "PAIN_NOT_FREQUENT_MESSAGE" : "Thank you for the information. I am going to send the information to your doctor. Take care. Good bye.",
+        "UNHANDLED" : "Sorry I didnt quite get that!"
+    }
+},
+"en-US": {
+    "translation": {
+        "MEDICINE_OFFER": "You need to take your medicine. When did you take your medicine?",
+        "WELCOME_MESSAGE": "Good morning, who is my pacient today?",
+        "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 AM.You have to attend doctors visit. When did you attend the visit?",
+        "MEDICINE_TAKEN": "Good to hear. You have to attend doctors visit. When did you attend the visit?",
+        "HELP_MESSAGE": "Help!",
+        "GOOD_BYE": "Good bye!",
+        "VISIT_START_MESSAGE" : "Okay then. We will make today visit now. Do you feel good or you feel pain?",
+        "PAIN_NOT_DEFINED" : "That is not good. Where do you feel pain? In head, in arms, in legs or in stomach?",
+        "PAIN_DEFINED" : "Pain in BODY_PART is not good. Is it heavy pain or light pain?",
+        "HEAVY_PAIN_MESSAGE" : "Heavy pain is dangerous. I will allert your doctor.",
+        "LIGHT_PAIN_MESSAGE" : "Do you feel it on regular basis or just now?",
+        "PAIN_FREQUENT_MESSAGE" : "Frequent pain is not good. I will allert your doctor.",
+        "PAIN_NOT_FREQUENT_MESSAGE" : "Thank you for the information. I am going to send the information to your doctor. Take care. Good bye.",
+        "UNHANDLED" : "Sorry I didnt quite get that!"
+    }
+},
+"de-DE": {
+    "translation": {
+        "MEDICINE_OFFER": "You need to take your medicine. When did you take your medicine?",
+        "WELCOME_MESSAGE": "Good morning, who is my pacient today?",
+        "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 AM.You have to attend doctors visit. When did you attend the visit?",
+        "MEDICINE_TAKEN": "Good to hear. You have to attend doctors visit. When did you attend the visit?",
+        "HELP_MESSAGE": "Help!",
+        "GOOD_BYE": "Good bye!",
+        "VISIT_START_MESSAGE" : "Okay then. We will make today visit now. Do you feel good or you feel pain?",
+        "PAIN_NOT_DEFINED" : "That is not good. Where do you feel pain? In head, in arms, in legs or in stomach?",
+        "PAIN_DEFINED" : "Pain in BODY_PART is not good. Is it heavy pain or light pain?",
+        "HEAVY_PAIN_MESSAGE" : "Heavy pain is dangerous. I will allert your doctor.",
+        "LIGHT_PAIN_MESSAGE" : "Do you feel it on regular basis or just now?",
+        "PAIN_FREQUENT_MESSAGE" : "Frequent pain is not good. I will allert your doctor.",
+        "PAIN_NOT_FREQUENT_MESSAGE" : "Thank you for the information. I am going to send the information to your doctor. Take care. Good bye.",
+        "UNHANDLED" : "Sorry I didnt quite get that!"
+    }
+}
+}

@@ -1,22 +1,32 @@
 PatientDefineIntent my name is {firstName} {lastName}
 PatientDefineIntent i am {firstName} {lastName}
+PatientDefineIntent {firstName} {lastName}
 
 MedicineIntent i had them at {medicineTime}
 MedicineIntent i did not take my medicine
 
 VisitDoneIntent i had the visit at {visitTime}
+VisitDoneIntent it was at {visitTime}
 
 VisitStartIntent i did not attend the doctors visit
+VisitStartIntent not today
+VisitStartIntent i forgot about that
+VisitStartIntent i forgot about the doctor visit
 
 PainDefinedIntent i feel pain in {bodyPart}
+PainDefinedIntent i have pain in {bodyPart}
+PainDefinedIntent in {bodyPart}
 
 PainNotDefinedIntent i feel pain
 
 PainIntesityIntent it is {painIntesity}
+PainIntesityIntent {painIntesity}
 
 PainFrequencyIntent it is {painFrequency}
+PainFrequencyIntent {painFrequency}
 
 ToiletTypeIntent it is {stoodType}
+ToiletTypeIntent {stoodType}
 
 EatIntent eating
 
