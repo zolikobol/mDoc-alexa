@@ -142,7 +142,7 @@ const handlers = {
         var visitTime = this.event.request.intent.slots.visitTime.value;
         Mdoc.collectedData['visitTime'] = visitTime;
         this.attributes['mdoc'] = Mdoc.collectedData;
-        this.emit(':ask', visitTime);
+        this.emit(':tell', this.t('VISIT_DONE_MESSAGE'));
     },
     /*
      *
@@ -212,21 +212,28 @@ const handlers = {
      */
     'ToiletTypeIntent': function () {
         var stoodType = this.event.request.intent.slots.stoodType.value;
-        this.emit(':ask', stoodType);
-
+        Mdoc.collectedData['stoodType'] = stoodType;
+        this.attributes['mdoc'] = Mdoc.collectedData;
+        if(stoodType == 'regular') {
+            this.emit(':ask', this.t('GOOD_STOOD_MESSAGE'));
+        } else if(stoodType == 'messy') {
+            this.emit(':ask', this.t('BAD_STOOD_MESSAGE'));
+        }
     },
     /*
      *
      */
     'EatIntent': function () {
-        this.emit(':ask', 'EatIntent');
+        this.emit(':ask', this.t('GOOD_STOOD_MESSAGE'));
 
     },
     /*
      *
      */
     'FeelGoodIntent': function () {
-        this.emit(':ask', 'FeelGoodIntent');
+        Mdoc.collectedData['pain'] = 'No pain';
+        this.attributes['mdoc'] = Mdoc.collectedData;
+        this.emit(':ask', this.t('FEEL_GOOD_MESSAGE'));
 
     },
     /*

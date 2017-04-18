@@ -8,13 +8,17 @@
         "HELP_MESSAGE": "Help!",
         "GOOD_BYE": "Good bye!",
         "VISIT_START_MESSAGE" : "Okay then. We will make today visit now. Do you feel good or you feel pain?",
+        "VISIT_DONE_MESSAGE" : "Okay. That is all. Take care and listen to your nurse. Good bye.",
         "PAIN_NOT_DEFINED" : "That is not good. Where do you feel pain? In head, in arms, in legs or in stomach?",
         "PAIN_DEFINED" : "Pain in BODY_PART is not good. Is it heavy pain or light pain?",
         "HEAVY_PAIN_MESSAGE" : "Heavy pain is dangerous. I will allert your doctor.",
         "LIGHT_PAIN_MESSAGE" : "Do you feel it on regular basis or just now?",
         "PAIN_FREQUENT_MESSAGE" : "Frequent pain is not good. I will allert your doctor.",
         "PAIN_NOT_FREQUENT_MESSAGE" : "Thank you for the information. I am going to send the information to your doctor. Take care. Good bye.",
-        "UNHANDLED" : "Sorry I didnt quite get that!"
+        "UNHANDLED" : "Sorry I didnt quite get that!",
+        "FEEL_GOOD_MESSAGE" : "Okay. Do you have regular or messy stool and urine?",
+        "GOOD_STOOD_MESSAGE" : "Good to hear. Do you eat everything you get or you leave food on table?",
+        "BAD_STOOD_MESSAGE" : "That is not good. I am going to alert your doctor."
     }
 },
 "en-US": {
@@ -26,13 +30,17 @@
         "HELP_MESSAGE": "Help!",
         "GOOD_BYE": "Good bye!",
         "VISIT_START_MESSAGE" : "Okay then. We will make today visit now. Do you feel good or you feel pain?",
+        "VISIT_DONE_MESSAGE" : "Okay. That is all. Take care and listen to your nurse. Good bye.",
         "PAIN_NOT_DEFINED" : "That is not good. Where do you feel pain? In head, in arms, in legs or in stomach?",
         "PAIN_DEFINED" : "Pain in BODY_PART is not good. Is it heavy pain or light pain?",
         "HEAVY_PAIN_MESSAGE" : "Heavy pain is dangerous. I will allert your doctor.",
         "LIGHT_PAIN_MESSAGE" : "Do you feel it on regular basis or just now?",
         "PAIN_FREQUENT_MESSAGE" : "Frequent pain is not good. I will allert your doctor.",
         "PAIN_NOT_FREQUENT_MESSAGE" : "Thank you for the information. I am going to send the information to your doctor. Take care. Good bye.",
-        "UNHANDLED" : "Sorry I didnt quite get that!"
+        "UNHANDLED" : "Sorry I didnt quite get that!",
+        "FEEL_GOOD_MESSAGE" : "Okay. Do you have regular or messy stool and urine?",
+        "GOOD_STOOD_MESSAGE" : "Good to hear. Do you eat everything you get or you leave food on table?",
+        "BAD_STOOD_MESSAGE" : "That is not good. I am going to alert your doctor."
     }
 },
 "de-DE": {
@@ -44,13 +52,17 @@
         "HELP_MESSAGE": "Help!",
         "GOOD_BYE": "Good bye!",
         "VISIT_START_MESSAGE" : "Okay then. We will make today visit now. Do you feel good or you feel pain?",
+        "VISIT_DONE_MESSAGE" : "Okay. That is all. Take care and listen to your nurse. Good bye.",
         "PAIN_NOT_DEFINED" : "That is not good. Where do you feel pain? In head, in arms, in legs or in stomach?",
         "PAIN_DEFINED" : "Pain in BODY_PART is not good. Is it heavy pain or light pain?",
         "HEAVY_PAIN_MESSAGE" : "Heavy pain is dangerous. I will allert your doctor.",
         "LIGHT_PAIN_MESSAGE" : "Do you feel it on regular basis or just now?",
         "PAIN_FREQUENT_MESSAGE" : "Frequent pain is not good. I will allert your doctor.",
         "PAIN_NOT_FREQUENT_MESSAGE" : "Thank you for the information. I am going to send the information to your doctor. Take care. Good bye.",
-        "UNHANDLED" : "Sorry I didnt quite get that!"
+        "UNHANDLED" : "Sorry I didnt quite get that!",
+        "FEEL_GOOD_MESSAGE" : "Okay. Do you have regular or messy stool and urine?",
+        "GOOD_STOOD_MESSAGE" : "Good to hear. Do you eat everything you get or you leave food on table?",
+        "BAD_STOOD_MESSAGE" : "That is not good. I am going to alert your doctor."
     }
 }
 }
