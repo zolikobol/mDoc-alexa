@@ -198,7 +198,7 @@ const handlers = {
         if(frequent.indexOf(painFrequency) >= 0){
             Mdoc.collectedData['painFrequency'] = painFrequency;
             this.attributes['mdoc'] = Mdoc.collectedData;
-            this.emit(':ask', this.t('PAIN_FREQUENT_MESSAGE') , this.t('PAIN_FREQUENT_MESSAGE'));
+            this.emit(':tell', this.t('PAIN_FREQUENT_MESSAGE') , this.t('PAIN_FREQUENT_MESSAGE'));
         }
         if(notFrequent.indexOf(painFrequency) >= 0){
             Mdoc.collectedData['painFrequency'] = painFrequency;
@@ -217,14 +217,15 @@ const handlers = {
         if(stoodType == 'regular') {
             this.emit(':ask', this.t('GOOD_STOOD_MESSAGE'));
         } else if(stoodType == 'messy') {
-            this.emit(':ask', this.t('BAD_STOOD_MESSAGE'));
+            this.emit(':tell', this.t('BAD_STOOD_MESSAGE'));
         }
+        this.emit(':ask', this.t('UNHANDLED') , this.t('UNHANDLED'));
     },
     /*
      *
      */
     'EatIntent': function () {
-        this.emit(':ask', this.t('GOOD_STOOD_MESSAGE'));
+        this.emit(':tell', this.t('EATING_MESSAGE'));
 
     },
     /*
@@ -233,7 +234,7 @@ const handlers = {
     'FeelGoodIntent': function () {
         Mdoc.collectedData['pain'] = 'No pain';
         this.attributes['mdoc'] = Mdoc.collectedData;
-        this.emit(':ask', this.t('FEEL_GOOD_MESSAGE'));
+        this.emit(':ask', this.t('FEEL_GOOD_MESSAGE') , this.t('FEEL_GOOD_MESSAGE'));
 
     },
     /*

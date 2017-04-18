@@ -10,10 +10,12 @@ function Mdoc() {
           'heavy'
       ],
       'painFrequent' : [
-          'frequent'
+          'frequent',
+          'daily',
+          'weekly'
       ],
       'painNotFrequent' : [
-          'frequent'
+          'just now'
       ]
   };
 

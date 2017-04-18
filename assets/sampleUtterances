@@ -19,15 +19,16 @@ PainDefinedIntent in {bodyPart}
 
 PainNotDefinedIntent i feel pain
 
-PainIntesityIntent it is {painIntesity}
+PainIntesityIntent the intensity is {painIntesity}
 PainIntesityIntent {painIntesity}
 
-PainFrequencyIntent it is {painFrequency}
+PainFrequencyIntent the frequency is {painFrequency}
 PainFrequencyIntent {painFrequency}
 
-ToiletTypeIntent it is {stoodType}
+ToiletTypeIntent the type is {stoodType}
 ToiletTypeIntent {stoodType}
 
-EatIntent eating
+EatIntent i eat everything
+EatIntent i do not eat everything
 
 FeelGoodIntent i feel good

@@ -3,7 +3,7 @@
     "translation": {
         "MEDICINE_OFFER": "You need to take your medicine. When did you take your medicine?",
         "WELCOME_MESSAGE": "Good morning, who is my pacient today?",
-        "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 AM.You have to attend doctors visit. When did you attend the visit?",
+        "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 a.m. . You have to attend doctors visit. When did you attend the visit?",
         "MEDICINE_TAKEN": "Good to hear. You have to attend doctors visit. When did you attend the visit?",
         "HELP_MESSAGE": "Help!",
         "GOOD_BYE": "Good bye!",
@@ -18,14 +18,15 @@
         "UNHANDLED" : "Sorry I didnt quite get that!",
         "FEEL_GOOD_MESSAGE" : "Okay. Do you have regular or messy stool and urine?",
         "GOOD_STOOD_MESSAGE" : "Good to hear. Do you eat everything you get or you leave food on table?",
-        "BAD_STOOD_MESSAGE" : "That is not good. I am going to alert your doctor."
+        "BAD_STOOD_MESSAGE" : "That is not good. I am going to alert your doctor.",
+        "EATING_MESSAGE" : "Okay. I will give the information to your doctor. Take care. Good bye."
     }
 },
 "en-US": {
     "translation": {
         "MEDICINE_OFFER": "You need to take your medicine. When did you take your medicine?",
         "WELCOME_MESSAGE": "Good morning, who is my pacient today?",
-        "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 AM.You have to attend doctors visit. When did you attend the visit?",
+        "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 a.m. . You have to attend doctors visit. When did you attend the visit?",
         "MEDICINE_TAKEN": "Good to hear. You have to attend doctors visit. When did you attend the visit?",
         "HELP_MESSAGE": "Help!",
         "GOOD_BYE": "Good bye!",
@@ -40,14 +41,15 @@
         "UNHANDLED" : "Sorry I didnt quite get that!",
         "FEEL_GOOD_MESSAGE" : "Okay. Do you have regular or messy stool and urine?",
         "GOOD_STOOD_MESSAGE" : "Good to hear. Do you eat everything you get or you leave food on table?",
-        "BAD_STOOD_MESSAGE" : "That is not good. I am going to alert your doctor."
+        "BAD_STOOD_MESSAGE" : "That is not good. I am going to alert your doctor.",
+        "EATING_MESSAGE" : "Okay. I will give the information to your doctor. Take care. Good bye."
     }
 },
 "de-DE": {
     "translation": {
         "MEDICINE_OFFER": "You need to take your medicine. When did you take your medicine?",
         "WELCOME_MESSAGE": "Good morning, who is my pacient today?",
-        "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 AM.You have to attend doctors visit. When did you attend the visit?",
+        "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 a.m. . You have to attend doctors visit. When did you attend the visit?",
         "MEDICINE_TAKEN": "Good to hear. You have to attend doctors visit. When did you attend the visit?",
         "HELP_MESSAGE": "Help!",
         "GOOD_BYE": "Good bye!",
@@ -62,7 +64,8 @@
         "UNHANDLED" : "Sorry I didnt quite get that!",
         "FEEL_GOOD_MESSAGE" : "Okay. Do you have regular or messy stool and urine?",
         "GOOD_STOOD_MESSAGE" : "Good to hear. Do you eat everything you get or you leave food on table?",
-        "BAD_STOOD_MESSAGE" : "That is not good. I am going to alert your doctor."
+        "BAD_STOOD_MESSAGE" : "That is not good. I am going to alert your doctor.",
+        "EATING_MESSAGE" : "Okay. I will give the information to your doctor. Take care. Good bye."
     }
 }
 }
