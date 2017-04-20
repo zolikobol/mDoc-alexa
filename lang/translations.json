@@ -49,26 +49,25 @@
 },
 "de-DE": {
     "translation": {
-        "GREETING" : "Guten Morgen,",
-        "MEDICINE_OFFER": "You need to take your medicine. When did you take your medicine?",
-        "WELCOME_MESSAGE": "Good morning, who is my pacient today?",
-        "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 a.m. . You have to attend doctors visit. When did you attend the visit?",
-        "MEDICINE_TAKEN": "Good to hear. You have to attend doctors visit. When did you attend the visit?",
+        "MEDICINE_OFFER": "Es ist bereits nach 9 Uhr. Zeit für deine Medikamente. Hast du diese bereits eingenommen? Wenn ja, wann?",
+        "WELCOME_MESSAGE": "Guten Morgen, Peter! Hast du gut geschlafen?",
+        "NOT_TAKEN_MEDICINE": "Peter, es ist sehr wichtig, dass du deine Medikamente pünktlich um 9 Uhr einnimmst. Bitte nimm sie nun direkt und sag mir, wenn du sie eingenommen hast.",
+        "MEDICINE_TAKEN": "Super, Peter! Ich habe die Uhrzeit notiert. Wie geht es dir eigentlich heute? Hast du Beschwerden?",
         "HELP_MESSAGE": "Help!",
         "GOOD_BYE": "Good bye!",
-        "VISIT_START_MESSAGE" : "Okay then. We will make today visit now. Do you feel good or you feel pain?",
+        "VISIT_START_MESSAGE" : "Wie geht es dir eigentlich heute? Hast du Beschwerden?",
         "VISIT_DONE_MESSAGE" : "Okay. That is all. Take care and listen to your nurse. Good bye.",
-        "PAIN_NOT_DEFINED" : "That is not good. Where do you feel pain? In head, in arms, in legs or in stomach?",
-        "PAIN_DEFINED" : "Pain in BODY_PART is not good. Is it heavy pain or light pain?",
-        "HEAVY_PAIN_MESSAGE" : "Heavy pain is dangerous. I will allert your doctor.",
-        "LIGHT_PAIN_MESSAGE" : "Do you feel it on regular basis or just now?",
-        "PAIN_FREQUENT_MESSAGE" : "Frequent pain is not good. I will allert your doctor.",
-        "PAIN_NOT_FREQUENT_MESSAGE" : "Thank you for the information. I am going to send the information to your doctor. Take care. Good bye.",
-        "UNHANDLED" : "Sorry I didnt quite get that!",
-        "FEEL_GOOD_MESSAGE" : "Okay. Do you have regular or messy stool and urine?",
-        "GOOD_STOOD_MESSAGE" : "Good to hear. Do you eat everything you get or you leave food on table?",
-        "BAD_STOOD_MESSAGE" : "That is not good. I am going to alert your doctor.",
-        "EATING_MESSAGE" : "Okay. I will give the information to your doctor. Take care. Good bye."
+        "FEEL_GOOD" : "Das freut mich. Wie war dein Stuhlgang heute morgen?",
+        "FEEL_BAD" : "Sind es leichte oder starke Schmerzen?",
+        "FEEL_NOT_WELL" : "Das ist nicht so schön. Was für Beschwerden hast du?",
+        "HEAVY_PAIN_MESSAGE" : "Das ist nicht schön. Ich werde direkt deinen Arzt informieren. Er wird sich umgehend bei dir melden. Bitte ruhe dich so lange aus.",
+        "LIGHT_PAIN_MESSAGE" : "Hast du die Schmerzen schon länger oder erst seit kurzem?",
+        "LONG_TIME_PAIN_MESSAGE" : "Ich werde deinen Arzt informieren und er wird sich bei dir melden. Bitte ruhe dich bis dahin aus.",
+        "RECELNT_PAIN_MESSAGE" : "Danke dir. Ich habe es notiert. Gib mir bitte direkt Bescheid, wenn die Schmerzen weiter anhalten, damit ich deinen Arzt informieren kann. Bitte ruhe dich ein wenig aus.",
+        "REGULAR_STOOD_MESSAGE" : "Gut zu hören. Hast du dein Frühstück komplett aufgegessen?",
+        "MESSY_STOOD_INTENT" : "Okay, mach' dir keine Sorgen aber zur Sicherheit informiere ich deinen Arzt.",
+        "YES_MESSAGE" : "Das ist super! Danke für die Unterhaltung. Ich sende die Informationen zu deinem Arzt.",
+        "NO_MESSAGE" : "Peter, das ist nicht gut. Es ist für dein Wohlbefinden wichtig, dass du aufisst. Ich gebe die Informationen an deinen Arzt weiter."
     }
 }
 }

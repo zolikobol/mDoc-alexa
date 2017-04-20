@@ -107,42 +107,17 @@ const handlers = {
      *  PatientDefinedIntent is firing when we say our name
      */
     'PatientDefineIntent': function () {
-        var firstName = this.event.request.intent.slots.firstName.value;
-        var lastName = this.event.request.intent.slots.lastName.value;
-        Mdoc.collectedData['firstName'] = firstName;
-        Mdoc.collectedData['lastName'] = lastName;
-        this.attributes['mdoc'] = Mdoc.collectedData;
-        this.emit(':ask', this.t('GREETING') + " " + firstName + " " + lastName + ". " + this.t('MEDICINE_OFFER'), this.t('MEDICINE_OFFER'));
+        this.emit(':ask', this.t('MEDICINE_OFFER'), this.t('MEDICINE_OFFER'));
     },
     /*
      *
      */
-    'MedicineIntent': function () {
-        var patientMedicineTime = moment(this.event.request.intent.slots.medicineTime.value, 'HH:mm');
-        if (typeof patientMedicineTime == 'undefined') {
-            Mdoc.collectedData['medicineTime'] = false;
-            this.attributes['mdoc'] = Mdoc.collectedData;
-            this.emit(':ask', this.t('NOT_TAKEN_MEDICINE'));
-        }
-        var medicineTime = moment(Mdoc.predefinedValues['medicineTime'], 'HH:mm');
-        var diff = Math.abs(medicineTime.diff(patientMedicineTime, 'seconds'));
-        Mdoc.collectedData['medicineTime'] = medicineTime;
-        this.attributes['mdoc'] = Mdoc.collectedData;
-        if (diff <= 3600) {
-            this.emit(':ask', this.t('MEDICINE_TAKEN') , this.t('MEDICINE_TAKEN'));
-        } else {
-            this.emit(':ask', this.t('NOT_TAKEN_MEDICINE') , this.t('NOT_TAKEN_MEDICINE'));
-        }
+    'MedicineTakenIntent': function () {
+        this.emit(':ask', this.t('MEDICINE_TAKEN') , this.t('MEDICINE_TAKEN'));
+    },
 
-    },
-    /*
-     *
-     */
-    'VisitDoneIntent': function () {
-        var visitTime = this.event.request.intent.slots.visitTime.value;
-        Mdoc.collectedData['visitTime'] = visitTime;
-        this.attributes['mdoc'] = Mdoc.collectedData;
-        this.emit(':tell', this.t('VISIT_DONE_MESSAGE'));
+    'MedicineNotTakenIntent': function () {
+        this.emit(':ask', this.t('NOT_TAKEN_MEDICINE') , this.t('NOT_TAKEN_MEDICINE'));
     },
     /*
      *
@@ -154,88 +129,48 @@ const handlers = {
     /*
      *
      */
-    'PainDefinedIntent': function () {
-        var bodyPart = this.event.request.intent.slots.bodyPart.value;
-        Mdoc.collectedData['pain'] = bodyPart;
-        this.attributes['mdoc'] = Mdoc.collectedData;
-        var message = this.t('PAIN_DEFINED').replace('BODY_PART' , bodyPart);
-        this.emit(':ask', message , message);
-
-    },
-    /*
-     *
-     */
-    'PainNotDefinedIntent': function () {
-        this.emit(':ask', this.t('PAIN_NOT_DEFINED') , this.t('PAIN_NOT_DEFINED'));
-
-    },
-    /*
-     *
-     */
-    'PainIntesityIntent': function () {
-        var painIntesity = this.event.request.intent.slots.painIntesity.value;
-        var lightPain = Mdoc.predefinedValues.painIntensityLight;
-        var heavyPain = Mdoc.predefinedValues.painIntensityHeavy;
-        if(lightPain.indexOf(painIntesity) >= 0){
-            Mdoc.collectedData['painIntensity'] = painIntesity;
-            this.attributes['mdoc'] = Mdoc.collectedData;
-            this.emit(':ask', this.t('LIGHT_PAIN_MESSAGE') , this.t('LIGHT_PAIN_MESSAGE'));
-        }
-        if(heavyPain.indexOf(painIntesity) >= 0){
-            Mdoc.collectedData['painIntensity'] = painIntesity;
-            this.attributes['mdoc'] = Mdoc.collectedData;
-            this.emit(':tell', this.t('HEAVY_PAIN_MESSAGE'));
-        }
-        this.emit(':ask', this.t('UNHANDLED'));
-    },
-    /*
-     *
-     */
-    'PainFrequencyIntent': function () {
-        var painFrequency = this.event.request.intent.slots.painFrequency.value;
-        var frequent = Mdoc.predefinedValues.painFrequent;
-        var notFrequent = Mdoc.predefinedValues.painNotFrequent;
-        if(frequent.indexOf(painFrequency) >= 0){
-            Mdoc.collectedData['painFrequency'] = painFrequency;
-            this.attributes['mdoc'] = Mdoc.collectedData;
-            this.emit(':tell', this.t('PAIN_FREQUENT_MESSAGE') , this.t('PAIN_FREQUENT_MESSAGE'));
-        }
-        if(notFrequent.indexOf(painFrequency) >= 0){
-            Mdoc.collectedData['painFrequency'] = painFrequency;
-            this.attributes['mdoc'] = Mdoc.collectedData;
-            this.emit(':tell', this.t('PAIN_NOT_FREQUENT_MESSAGE'));
-        }
-        this.emit(':ask', this.t('UNHANDLED') , this.t('UNHANDLED'));
-    },
-    /*
-     *
-     */
-    'ToiletTypeIntent': function () {
-        var stoodType = this.event.request.intent.slots.stoodType.value;
-        Mdoc.collectedData['stoodType'] = stoodType;
-        this.attributes['mdoc'] = Mdoc.collectedData;
-        if(stoodType == 'regular') {
-            this.emit(':ask', this.t('GOOD_STOOD_MESSAGE'));
-        } else if(stoodType == 'messy') {
-            this.emit(':tell', this.t('BAD_STOOD_MESSAGE'));
-        }
-        this.emit(':ask', this.t('UNHANDLED') , this.t('UNHANDLED'));
-    },
-    /*
-     *
-     */
-    'EatIntent': function () {
-        this.emit(':tell', this.t('EATING_MESSAGE'));
-
-    },
-    /*
-     *
-     */
     'FeelGoodIntent': function () {
-        Mdoc.collectedData['pain'] = 'No pain';
-        this.attributes['mdoc'] = Mdoc.collectedData;
-        this.emit(':ask', this.t('FEEL_GOOD_MESSAGE') , this.t('FEEL_GOOD_MESSAGE'));
+        this.emit(':ask', this.t('FEEL_GOOD') , this.t('FEEL_GOOD'));
 
+    },
+    /*
+     *
+     */
+    'FeelBadIntent': function () {
+        this.emit(':ask', this.t('FEEL_BAD') , this.t('FEEL_BAD'));
+
+    },
+    /*
+     *
+     */
+    'FeelNotWellIntent': function () {
+        this.emit(':ask', this.t('FEEL_NOT_WELL') , this.t('FEEL_NOT_WELL'));
+
+    },
+    'HeavyPainIntent' : function() {
+      this.emit(':ask', this.t('HEAVY_PAIN_MESSAGE') , this.t('HEAVY_PAIN_MESSAGE'));
+    },
+    'LightPainPainIntent' : function() {
+      this.emit(':ask', this.t('LIGHT_PAIN_MESSAGE') , this.t('LIGHT_PAIN_MESSAGE'));
+    },
+
+    'LongTimePainIntent' : function() {
+      this.emit(':ask', this.t('LONG_TIME_PAIN_MESSAGE') , this.t('LONG_TIME_PAIN_MESSAGE'));
+    },
+    'RecentlyPainIntent' : function() {
+      this.emit(':ask', this.t('RECELNT_PAIN_MESSAGE') , this.t('RECELNT_PAIN_MESSAGE'));
+    },
+    'RegularStoodIntent' : function() {
+      this.emit(':ask', this.t('REGULAR_STOOD_MESSAGE') , this.t('REGULAR_STOOD_MESSAGE'));
+    },
+    'MessyStoodIntent' : function() {
+      this.emit(':ask', this.t('MESSY_STOOD_INTENT') , this.t('MESSY_STOOD_INTENT'));
+    },
+    'AMAZON.YesIntent' : function() {
+      this.emit(':ask', this.t('YES_MESSAGE') , this.t('YES_MESSAGE'));
+    },
+    'AMAZON.NoIntent' : function() {
+      this.emit(':ask', this.t('NO_MESSAGE') , this.t('NO_MESSAGE'));
     },
     /*
      *

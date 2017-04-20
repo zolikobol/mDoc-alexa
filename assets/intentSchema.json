@@ -1,20 +1,10 @@
 {
   "intents": [
     {
-      "intent": "PatientDefineIntent",
-      "slots": [
-        {
-          "name": "firstName",
-          "type": "AMAZON.US_FIRST_NAME"
-        },
-        {
-          "name": "lastName",
-          "type": "AMAZON.US_FIRST_NAME"
-        }
-      ]
+      "intent": "PatientDefineIntent"
     },
     {
-      "intent": "MedicineIntent",
+      "intent": "MedicineTakenIntent",
       "slots": [
         {
           "name": "medicineTime",
@@ -23,61 +13,43 @@
       ]
     },
     {
-      "intent": "VisitDoneIntent",
-      "slots": [
-        {
-          "name": "visitTime",
-          "type": "AMAZON.TIME"
-        }
-      ]
+      "intent": "MedicineNotTakenIntent"
     },
     {
       "intent": "VisitStartIntent"
     },
     {
-      "intent": "PainDefinedIntent",
-      "slots": [
-        {
-          "name": "bodyPart",
-          "type": "BODY_PART"
-        }
-      ]
-    },
-    {
-      "intent": "PainNotDefinedIntent"
-    },
-    {
-      "intent": "PainIntesityIntent",
-      "slots": [
-        {
-          "name": "painIntesity",
-          "type": "PAIN_INTESTY"
-        }
-      ]
-    },
-    {
-      "intent": "PainFrequencyIntent",
-      "slots": [
-        {
-          "name": "painFrequency",
-          "type": "PAIN_FREQUENCY"
-        }
-      ]
-    },
-    {
-      "intent": "ToiletTypeIntent",
-      "slots": [
-        {
-          "name": "stoodType",
-          "type": "STOOD_TYPE"
-        }
-      ]
-    },
-    {
-      "intent": "EatIntent"
-    },
-    {
       "intent": "FeelGoodIntent"
+    },
+    {
+      "intent": "FeelBadIntent"
+    },
+    {
+      "intent": "FeelNotWellIntent"
+    },
+    {
+      "intent": "HeavyPainIntent"
+    },
+    {
+      "intent": "LightPainPainIntent"
+    },
+    {
+      "intent": "LongTimePainIntent"
+    },
+    {
+      "intent": "RecentlyPainIntent"
+    },
+    {
+      "intent": "RegularStoodIntent"
+    },
+    {
+      "intent": "MessyStoodIntent"
+    },
+    {
+      "intent": "AMAZON.YesIntent"
+    },
+    {
+      "intent": "AMAZON.NoIntent"
     },
     {
       "intent": "AMAZON.HelpIntent"

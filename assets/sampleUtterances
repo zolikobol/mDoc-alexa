@@ -31,3 +31,35 @@ EatIntent i eat everything
 EatIntent i do not eat everything
 
 FeelGoodIntent i feel good
+
+//------------------
+
+PatientDefineIntent danke mir geht es gut und ich habe gut geschlafen
+
+MedicineTakenIntent es war um {medicineTime}
+
+MedicineNotTakenIntent nein ich habe meine medikamente heute noch nicht eingenommen
+
+VisitStartIntent danke ich habe sie eingemommen
+
+FeelGoodIntent mir geht es heute sehr gut ich habe keine keine Beschwerden
+
+FeelBadIntent ich habe Bauchschmerzen
+
+FeelNotWellIntent mir geht es heute nicht so gut
+
+HeavyPainIntent starke schmerzen
+
+LightPainPainIntent leichte schmerzen
+
+LongTimePainIntent ich habe die schmerzen schon länger
+
+RecentlyPainIntent ich habe die schmerzen erst seit kurzem
+
+RegularStoodIntent fest
+
+MessyStoodIntent flüssig
+
+AMAZON.YesIntent ya
+
+AMAZON.NoIntent nein
