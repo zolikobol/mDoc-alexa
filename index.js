@@ -112,7 +112,7 @@ const handlers = {
         Mdoc.collectedData['firstName'] = firstName;
         Mdoc.collectedData['lastName'] = lastName;
         this.attributes['mdoc'] = Mdoc.collectedData;
-        this.emit(':ask', "Hello " + firstName + " " + lastName + ". " + this.t('MEDICINE_OFFER'), this.t('MEDICINE_OFFER'));
+        this.emit(':ask', this.t('GREETING') + " " + firstName + " " + lastName + ". " + this.t('MEDICINE_OFFER'), this.t('MEDICINE_OFFER'));
     },
     /*
      *

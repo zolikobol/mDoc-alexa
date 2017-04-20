@@ -1,6 +1,7 @@
 {
   "en-GB": {
     "translation": {
+        "GREETING" : "Hello",
         "MEDICINE_OFFER": "You need to take your medicine. When did you take your medicine?",
         "WELCOME_MESSAGE": "Good morning, who is my pacient today?",
         "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 a.m. . You have to attend doctors visit. When did you attend the visit?",
@@ -24,6 +25,7 @@
 },
 "en-US": {
     "translation": {
+        "GREETING" : "Hello",
         "MEDICINE_OFFER": "You need to take your medicine. When did you take your medicine?",
         "WELCOME_MESSAGE": "Good morning, who is my pacient today?",
         "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 a.m. . You have to attend doctors visit. When did you attend the visit?",
@@ -47,6 +49,7 @@
 },
 "de-DE": {
     "translation": {
+        "GREETING" : "Guten Morgen,",
         "MEDICINE_OFFER": "You need to take your medicine. When did you take your medicine?",
         "WELCOME_MESSAGE": "Good morning, who is my pacient today?",
         "NOT_TAKEN_MEDICINE": "This is not good. You need to take your medicine every day at 9 a.m. . You have to attend doctors visit. When did you attend the visit?",
