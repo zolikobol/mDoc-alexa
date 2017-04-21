@@ -137,7 +137,7 @@ const handlers = {
      *
      */
     'FeelBadIntent': function () {
-        this.emit(':ask', this.t('FEEL_BAD') , this.t('FEEL_BAD'));
+        this.emit(':tell', this.t('FEEL_BAD') , this.t('FEEL_BAD'));
 
     },
     /*
@@ -148,7 +148,7 @@ const handlers = {
 
     },
     'HeavyPainIntent' : function() {
-      this.emit(':ask', this.t('HEAVY_PAIN_MESSAGE') , this.t('HEAVY_PAIN_MESSAGE'));
+      this.emit(':tell', this.t('HEAVY_PAIN_MESSAGE') , this.t('HEAVY_PAIN_MESSAGE'));
     },
     'LightPainPainIntent' : function() {
       this.emit(':ask', this.t('LIGHT_PAIN_MESSAGE') , this.t('LIGHT_PAIN_MESSAGE'));
@@ -167,10 +167,10 @@ const handlers = {
       this.emit(':ask', this.t('MESSY_STOOD_INTENT') , this.t('MESSY_STOOD_INTENT'));
     },
     'AMAZON.YesIntent' : function() {
-      this.emit(':ask', this.t('YES_MESSAGE') , this.t('YES_MESSAGE'));
+      this.emit(':tell', this.t('YES_MESSAGE') , this.t('YES_MESSAGE'));
     },
     'AMAZON.NoIntent' : function() {
-      this.emit(':ask', this.t('NO_MESSAGE') , this.t('NO_MESSAGE'));
+      this.emit(':tell', this.t('NO_MESSAGE') , this.t('NO_MESSAGE'));
     },
     /*
      *

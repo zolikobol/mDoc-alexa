@@ -34,6 +34,8 @@ FeelGoodIntent i feel good
 
 //------------------
 
+Alexa, frage der arzt
+
 PatientDefineIntent danke mir geht es gut und ich habe gut geschlafen
 
 MedicineTakenIntent es war um {medicineTime}
